@@ -1,0 +1,12 @@
+﻿Enable-Migrations -ContextTypeName InventoryContext -MigrationsDirectory Migrations\Inventory
+
+add-migration -ConfigurationTypeName InventorySystem.Migrations.Inventory.Configuration "Inital"
+
+update-database -ConfigurationTypeName InventorySystem.Migrations.Inventory.Configuration
+
+
+
+--------------------ApplicationDbContext-------------------------------------
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\Identity
+add-migration -ConfigurationTypeName InventorySystem.Migrations.Identity.Configuration "Third"
+update-database -ConfigurationTypeName InventorySystem.Migrations.Identity.Configuration
